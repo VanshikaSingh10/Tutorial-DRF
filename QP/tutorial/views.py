@@ -1,7 +1,5 @@
 from django.shortcuts import render
-#from django.http.response import JsonResponse
-from rest_framework.response import Response
-#from rest_framework.parsers import JSONParser 
+from rest_framework.response import Response 
 from rest_framework import status
 from rest_framework import viewsets
 from rest_framework.decorators import action
@@ -116,12 +114,3 @@ class TutorialViewSet(viewsets.ViewSet):
 #     elif request.method == 'DELETE': 
 #         tutorial.delete() 
 #         return JsonResponse({'message': 'Tutorial was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
-
-# @api_view(['GET'])
-# def tutorial_list_published(request):
-#      # GET all published tutorials 
-#      tutorials = Tutorials.objects.filter(published=True)
-        
-#      if request.method == 'GET': 
-#         tutorials_serializer = TutorialsSerializer(tutorials, many=True)
-#         return JsonResponse(tutorials_serializer.data, safe=False)
