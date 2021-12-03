@@ -10,7 +10,8 @@ from tutorial.serializers import TutorialsSerializer
 # from rest_framework.decorators import api_view
 
 
-class TutorialViewSet(viewsets.ViewSet):
+class TutorialViewSet(viewsets.ModelViewSet):
+    queryset=Tutorials.objects.all()
     serializer_class = TutorialsSerializer
     #tutorial_param_config = openapi.Parameter(
         #'id', in_=openapi.IN_QUERY, description='Description', type=openapi.TYPE_STRING)
